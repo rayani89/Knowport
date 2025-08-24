@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowport/lesson</title>
+    <link rel="stylesheet" href="licao.css">
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBqVqjm3_ScQopk3VHj83ULEpektaYqFW4",
+      authDomain: "guarlearn.firebaseapp.com",
+      projectId: "guarlearn",
+      storageBucket: "guarlearn.firebasestorage.app",
+      messagingSenderId: "723688810424",
+      appId: "1:723688810424:web:b7486ce8575b308eb6d14d",
+      measurementId: "G-YC8D8HFPPN"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+    <header><a href="./s11.html">
+    <button type="submit">
+        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+fill="currentColor" viewBox="0 0 24 22" >
+<path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"></path><path d="M13.29 7.29 8.59 12l4.7 4.71 1.42-1.42-3.3-3.29 3.3-3.29z"></path>
+</svg><span class="voltarindex">Sair</span>
+</button></a><h1 class="titlee">Knowport</h1></header>
+    <main>
+        <div class="explicacaoL">
+          <h4> Viagem, documentos e frases úteis</h4>
+<p class="b">Trip – Viagem</p>
+<p class="a">Journey – Viagem</p>
+<p class="b">Travel – Viajar</p>
+<p class="a">Explore – Explorar</p>
+<p class="b">Visit – Visitar</p>
+<p class="a">Sightseeing – Passeio turístico</p>
+<p class="b">Passport – Passaporte</p>
+<p class="a">Visa – Visto</p>
+<p class="b">Ticket – Bilhete</p>
+<p class="a">Travel insurance – Seguro de viagem</p>
+<p class="b">Driver's license – Carteira de motorista</p>
+            <button class="comecarL">Start lesson</button>
+        </div>
+
+        <div class="licaoL" id="l3" translate="no">
+            <!--quest-->
+            <h4 class="perguntaL"></h4>
+            <button class="btnAlternativa" data-index="0"></button>
+            <button class="btnAlternativa" data-index="1"></button>
+            <button class="btnAlternativa" data-index="2"></button>
+            <button class="btnAlternativa" data-index="3"></button>
+            
+            <button class="proximaL"></button>
+        </div>
+        <div class="alertaSucesso" style="display: none;">Lição concluída com sucesso!</div>
+            <div class="alertaFalha" style="display: none;">Ops! A lição não foi concluída com sucesso. Tente novamente!</div>
+    </main>
+</body>
+<script src=./s11.js></script>
+</html>

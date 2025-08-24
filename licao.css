@@ -1,0 +1,350 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none; 
+    box-sizing: border-box; 
+    font-.gfs-didot-regular {
+  font-family: "GFS Didot", serif;
+  font-style: normal;
+}
+}
+
+body {
+    background-color: rgb(255, 248, 217); 
+    color: rgb(73, 36, 51);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+header {
+    background-color: #f13535; 
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    display: flex;
+  align-items: center;
+  justify-content: center; /* isso centraliza TUDO no meio */
+  gap: 20px; /* espaço entre os itens (opcional) */
+  position: relative;
+}
+
+header h1 {    
+    font-size: 60px;
+    letter-spacing: 1px;
+}
+
+header button[type="submit"] {
+    background-color: transparent; 
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    color: white;
+     position: absolute;
+     top: -15px;
+     left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+header button[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 6px 7px rgba(250, 72, 116, 0.479);
+}
+
+header button[type="submit"] svg {
+    fill: white; 
+    width: 20px;
+    height: 15px; 
+}
+.titu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+/* --- Estilos da Área Principal (Main) --- */
+main {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 20px auto; 
+    width: 93%; /* Ocupa 90% da largura disponível */
+}
+
+/* --- Estilos da Seção de Explicação --- */
+.explicacaoL { 
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.explicacaoL p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* --- Estilos da Seção da Lição (Conteúdo Principal) --- */
+.licaoL {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    min-height: 300px; /* Altura mínima para evitar layout 'saltitante' */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Distribui o espaço entre os elementos da lição */
+}
+
+.perguntaL {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* --- Estilos para Botões Gerais (Começar, Próxima, Enviar, Alternativas) --- */
+button {
+    background-color: #18c0dd; /* Azul padrão para botões */
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 150px;
+    margin: 4rem 10px 10px;
+
+}
+
+button:hover {
+    background-color: #844996; 
+    transform: translateY(-2px); 
+    box-shadow: 0 12px 40px rgb(185, 121, 211);
+}
+
+button:active {
+    transform: translateY(0); 
+}
+
+
+.btnAlternativa {
+    background-color: #41586b; 
+    color: white;
+    padding: 10px 20px;
+    margin: 8px;
+    font-size: 1em;
+    flex-grow: 1; 
+    max-width: 300px; 
+}
+
+.btnAlternativa:hover {
+    background-color: #1d808b;
+}
+
+#alternativesContainerL1 { 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+/* --- Estilos para o Input de Resposta (Criado Dinamicamente) --- */
+.inputResposta {
+    width: 80%; /* Ocupa a maior parte da largura */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-align: center; /* Centraliza o texto digitado */
+    outline: none; /* Remove o contorno azul no foco padrão */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputResposta:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); 
+}
+.alertaSucesso, .alertaFalha {
+    background-color: #e2f0f4; 
+    color: #2c3e50; 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 500;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.alertaSucesso {
+    background-color: #d4edda; 
+    color: #155724; 
+    border: 1px solid #c3e6cb;
+}
+
+.alertaFalha {
+    background-color: #f8d7da; 
+    color: #721c24; 
+    border: 1px solid #f5c6cb;
+}
+
+.alertaSucesso h2, .alertaFalha h2 {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+
+.alertaSucesso p, .alertaFalha p {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.alertaSucesso button, .alertaFalha button {
+    background-color: #28a745;
+}
+
+.alertaFalha button {
+    background-color: #dc3545; 
+}
+
+.alertaSucesso button:hover {
+    background-color: #218838;
+}
+
+.alertaFalha button:hover {
+    background-color: #c82333;
+}
+
+.volt {
+    display: inline-block; 
+    background-color: #6c757d; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-top: 10px; /* Espaçamento do conteúdo acima */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.volt:hover {
+    background-color: #5a6268;
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    main {
+        padding: 15px;
+        width: 95%;
+    }
+
+    .explicacaoL, .licaoL, .alertaSucesso, .alertaFalha {
+        padding: 20px;
+    }
+
+    .perguntaL {
+        font-size: 1.4em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+        width: 100%; /* Botões maiores em telas menores */
+        margin: 5px 0;
+    }
+
+    .btnAlternativa {
+        width: 100%; /* Alternativas ocupam a largura total */
+        margin: 5px 0;
+    }
+
+    .inputResposta {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header button[type="submit"] {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+
+    .explicacaoL, .licaoL, .alertaSucesso, .alertaFalha {
+        font-size: 1em;
+    }
+
+    .perguntaL {
+        font-size: 1.2em;
+    }
+
+    .alertaSucesso h2, .alertaFalha h2 {
+        font-size: 1.4em;
+    }
+}
+.certa {
+  background-color: #c8f7c5; /* verde claro */
+  border: 2px solid #27ae60;
+  box-shadow: 0 10px 40px rgb(109, 194, 113) ;
+}
+
+.errada {
+  background-color: #f7c5c5; /* vermelho claro */
+  border: 2px solid #c0392b;
+  box-shadow: 0 10px 40px rgb(255, 126, 126);
+}
+p {
+    display: flex;
+    flex-direction: column;
+}
+.a {
+    max-width: 40%;
+    border-radius: 10px;
+    margin: auto;
+    background-color: rgba(255, 186, 186, 0.87);
+}
+.b {
+    max-width: 42%;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #f8d9afd2;
+}
+.c {
+    max-width: 40%;
+    border-radius: 10px;
+    margin: auto;
+    background-color: rgba(255, 141, 175, 0.795);
+}

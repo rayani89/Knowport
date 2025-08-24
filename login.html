@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="keywords" content="inglês, aprender, site">
+ <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ <link rel="stylesheet" href="../css/login.css">
+
+ 
+  <!-- Firebase SDKs (NÃO MEXA AQUI) -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBqVqjm3_ScQopk3VHj83ULEpektaYqFW4",
+      authDomain: "guarlearn.firebaseapp.com",
+      projectId: "guarlearn",
+      storageBucket: "guarlearn.firebasestorage.app",
+      messagingSenderId: "723688810424",
+      appId: "1:723688810424:web:b7486ce8575b308eb6d14d",
+      measurementId: "G-YC8D8HFPPN"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  
+ <title>Knowport-Login</title>
+ </head>
+ <body>
+    <header><h1>Knowport</h1></header>
+    <main class="container">
+</form>
+        <form id="formLog">
+            <div class="Login">
+            <h2>Login</h2>
+            <!--login do usuario-->
+            <div class="divs" id="pri">
+                <input id="emaillogin" placeholder="Usuário" type="email">
+                <i class="bx bxs-user"></i>
+            </div>
+            <div class="divs">
+                <input id="senhalogin" placeholder="Senha" type="password">
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+            <div id="lembrar">
+                <label>
+                    <input type="checkbox">
+                    <p>Lembrar minha senha</p>
+                </label>
+            </div>
+
+            <button type="submit" class="l">Concluir login</button> <!--este botao deve levar o usuario de volta ao index (need js)-->
+            <p class="cads">Não tem uma conta?  <a href="register.html"><em> Cadastre-se</em></a></p>
+            <p id="errormsg"></p>
+            <p id="errormsg2"></p>
+
+        </div> <!--aqui termina o login -->
+
+        </form>
+    </main>
+ <script src="../js/login.js"></script>
+ <footer> <p>Aprenda um pouco de inglês para mergulhar em um mar de infinitas
+         possibilidades usando nosso site!</p></footer>
+ </body>

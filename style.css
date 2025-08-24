@@ -1,0 +1,132 @@
+/* Universal reset and font correction */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Good practice for consistent sizing */
+}
+
+/* Font definitions - corrected and applied where appropriate */
+.gfs-didot-regular {
+  font-family: "GFS Didot", serif;
+  font-style: normal;
+}
+
+body {
+    background: #faf3ff;
+
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: "Google Sans", sans-serif;
+    color: #ce8049; 
+    background-image: url(../img/Pico\ Dourado\ ao\ Pôr\ do\ Sol.png);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.conteudo {
+    z-index: 1;
+    background-color: #fff7dbda; 
+    border-radius: 20px;
+    margin: 15px 20px 20px;
+    padding: 1%;
+    border: 2px solid #F2E9E4;
+    box-shadow: -10px 0px 40px rgb(129, 1, 61);
+    backdrop-filter: blur(10px); /* aqui acontece o desfoque do fundo */
+  -webkit-backdrop-filter: blur(10px); /* suporte para Safari */
+}
+
+
+.conteudo h4 {
+    background-color: rgba(255, 255, 255, 0.308);
+    border-radius: 20px;
+    width: max-content;
+    max-height: min-content;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px; 
+    color: #cc554c; 
+}
+
+
+.pagina {
+    align-items: center;
+    justify-content: center;
+    background-color: #afa4b9; 
+    margin: 3% 5%;
+    padding: 2%;
+    font-size: 25px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+    color: #654e6e; 
+}
+.pagina:hover {
+    background-color: #9779b3;
+    color: #ddcff7;
+    box-shadow: 0 8px 20px rgba(81, 53, 240, 0.712); /* A soft, warm glow from the coral accent color */
+    transform: translateY(-2px); /
+}
+
+
+header h1 {
+    color: #fff0dd; 
+    display: flex;
+    font-size: 70px;
+    justify-content: center;
+    align-items: center;
+    margin: 27px 0 38px;
+    text-shadow: 10px 10px  100px rgb(255, 55, 0);
+    font-family: "GFS Didot", serif; 
+    background-color: #e07b5f98;
+}
+
+
+.sairbtn {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #ffd3b5; 
+    cursor: pointer;
+    border-radius: 0 0 20px 20px;
+    border: 1px solid #FFF; 
+    width: 150px;
+    height: 30px;
+    color: #6C4C5B; 
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.sairbtn:hover {
+    background-color: #f3af9c; 
+}
+
+span {
+    position: relative;
+    top: -4px;
+    margin-left: 7px;
+}
+
+#apresentar {
+    z-index: 2;
+    margin: 4px 30px 0;
+    margin-bottom: -10px;
+    background-color: #fffeebc9; 
+    width: 73%;
+    border: 3px solid #ffffff; 
+    border-radius: 10% 10% 0 0;
+    padding-left: 4px;
+    padding: 3px;
+    font-size: smaller;
+    color: #6C4C5B;
+}
+
+.extra a {
+    text-decoration: underline;
+    color: #b8645f; 
+}
+.extra {
+    font-size: 22px;
+}
