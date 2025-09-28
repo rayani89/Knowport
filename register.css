@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.gfs-didot-regular {
+    font-family: "GFS Didot", serif;
+    font-style: normal;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+}
+body {
+    height: 90vh;
+    background-color: #1b1920;
+    background-image: url(../img/65980cd2b517b517f6c275a25304bf52\ \(2\)\ \(1\).jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: default;
+}
+h1 {
+    margin:  auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vh;
+    color: rgb(255, 244, 215);
+}
+form:hover {
+    box-shadow: 0 3px 20px rgba(180, 23, 57, 0.5);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(209, 209, 209, 0.5);
+    position: relative;
+    align-content: center;
+    width: 100%;
+    max-height: 80%;
+    max-width: min-content;
+    margin: auto;
+    padding: 3% 3%;
+    border: 4px solid gainsboro;
+    border-radius: 7%;
+    color: #5c1f1f;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 0 5%;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 200%;
+}
+input {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
+    height: 1.5rem;
+    cursor: pointer;
+    color: rgb(88, 11, 30);
+    text-shadow: #2c2638;
+}
+.morango {
+    margin-top: 0.8rem;
+}
+button {
+    cursor: pointer;
+    border-radius: 6%;
+    padding: 2%;
+    border: 2px solid rgba(226, 198, 228, 0.74);
+    color: rgb(68, 52, 44);
+    background-color: rgba(255, 255, 255, 0.815);
+}
+#mensagem, #msg, #mensage, #sucesso {
+    display: absolute;
+    flex-direction: column;
+    background-color: rgb(255, 228, 196, 0.555);
+    border-radius: 5%;
+    min-width: max-content; max-width: max-content;
+   word-break: break-word;
+   overflow-wrap: break-word;
+}
+a {
+    text-decoration-line: none;
+    color: rgb(27, 60, 82);
+}
+/* Responsividade básica */
+@media (max-width: 480px) {
+    h1 {
+     margin:  auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin-bottom: 30px;
+    }
+}
